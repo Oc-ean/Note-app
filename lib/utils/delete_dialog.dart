@@ -8,7 +8,7 @@ class DeleteAlertBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       title: const Text('Notes'),
-      content: const Text('Are you sure you want to delete this?'),
+      content: const Text('Are you sure you want to delete this note?'),
       actions: [
         TextButton(
           onPressed: onPressed,

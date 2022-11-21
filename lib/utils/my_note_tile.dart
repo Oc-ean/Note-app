@@ -44,8 +44,9 @@ class _MyNoteTileState extends State<MyNoteTile> {
         // height: 130,
         // width: 170,
         padding: const EdgeInsets.only(
-          left: 13,
-          top: 19,
+          left: 7,
+          right: 7,
+          top: 15,
         ),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8), color: widget.color),
@@ -54,17 +55,17 @@ class _MyNoteTileState extends State<MyNoteTile> {
           children: [
             Text(
               widget.title,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
               style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Roboto'),
             ),
-            const SizedBox(
-              height: 5,
-            ),
+            const Spacer(),
             Text(
               widget.content,
-              maxLines: 3,
+              maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(
                 fontSize: 16,
@@ -75,9 +76,7 @@ class _MyNoteTileState extends State<MyNoteTile> {
             // Text(
             //   dateTime.toString(),
             // ),
-            const SizedBox(
-              height: 5,
-            ),
+            const Spacer(),
             Text(
               formatDate(
                 widget.dateTime!,
@@ -91,9 +90,10 @@ class _MyNoteTileState extends State<MyNoteTile> {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 5,
-            ),
+            // const SizedBox(
+            //   height: 5,
+            // ),
+            Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -143,7 +143,10 @@ class _MyNoteTileState extends State<MyNoteTile> {
                   ),
                 ),
               ],
-            )
+            ),
+            const SizedBox(
+              height: 5,
+            ),
           ],
         ),
 

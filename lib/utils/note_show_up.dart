@@ -71,6 +71,9 @@ class NoteShowUp extends StatelessWidget {
                     ),
                   ],
                 ),
+                const SizedBox(
+                  height: 15,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(12),
                   child: Column(
@@ -80,6 +83,7 @@ class NoteShowUp extends StatelessWidget {
                             const TextStyle(fontSize: 25, fontFamily: 'Roboto'),
                         keyboardType: TextInputType.visiblePassword,
                         controller: noteProvider.controller,
+                        maxLines: 2,
                         decoration: InputDecoration(
                           contentPadding: const EdgeInsets.only(left: 15),
                           hintText: 'Enter titles',
@@ -90,7 +94,7 @@ class NoteShowUp extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        height: 8,
+                        height: 5,
                       ),
                       Text(
                         formatDate(
